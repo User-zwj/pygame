@@ -3,7 +3,7 @@
 import pygame
 pygame.init()
 
-win = pygame.display.set_mode((500, 500))
+win = pygame.display.set_mode((800, 500))   #800:width, 500:height
 
 pygame.display.set_caption("First Game")
 
@@ -45,7 +45,7 @@ while run:
             y -= (jumpCount ** 2) * 0.5 * neg
             jumpCount -= 1
         else:
-            isJump = False
+            isJump = False     #don't forget, otherwise it will keep dropping lower than the starting y-value
             jumpCount = 10
 
     win.fill((0,0,0))
